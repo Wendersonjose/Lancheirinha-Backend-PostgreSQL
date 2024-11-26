@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 # Lancheirinha Backend 🥗📦
 
 Bem-vindo ao repositório do **Lancheirinha Backend**, a API que alimenta o sistema de gerenciamento de produtos da **Lancheirinha da Nutri**! Este backend foi desenvolvido para atender operações CRUD (Create, Read, Update, Delete) de produtos com suporte para upload de imagens.
+=======
+# Lancheirinha-Backend-PostgreSQL
+
+API backend para o projeto **"Lancheirinha da Nutri"**, desenvolvido com **Node.js**, **Express** e **PostgreSQL**. 🚀
+
+Este backend é responsável por gerenciar os dados do sistema, permitindo **CRUD de produtos** e suportando **upload de imagens**. O banco de dados utilizado é o **PostgreSQL**, garantindo confiabilidade e desempenho.
+>>>>>>> 43a0a62f3f2899427d423ee5ff2ebde93a157444
 
 ---
 
@@ -22,6 +30,7 @@ Bem-vindo ao repositório do **Lancheirinha Backend**, a API que alimenta o sist
 - [Multer](https://github.com/expressjs/multer) (para upload de imagens)
 
 ---
+<<<<<<< HEAD
  
 ## 🚀 Como Rodar o Projeto
 1. Clone o repositório:
@@ -31,6 +40,17 @@ Bem-vindo ao repositório do **Lancheirinha Backend**, a API que alimenta o sist
 
 2.Instale as dependências:
 
+=======
+
+## **Como Configurar o Projeto**
+
+### **1. Clone o Repositório**
+```bash
+git clone https://github.com/seu-usuario/Lancheirinha-Backend-PostgreSQL.git
+2. Instale as Dependências
+bash
+Copiar código
+>>>>>>> 43a0a62f3f2899427d423ee5ff2ebde93a157444
 npm install
 3. Configure o Banco de Dados
 Certifique-se de ter o PostgreSQL instalado.
@@ -83,5 +103,9 @@ Crie um Pull Request. 🚀
 Licença
 Este projeto está licenciado sob a MIT License.
 
+<<<<<<< HEAD
 Desenvolvido por Wenderson José com 💻 e ☕.
 
+=======
+Desenvolvido com ❤️ por Wenderson José. 🎉
+>>>>>>> 43a0a62f3f2899427d423ee5ff2ebde93a157444
