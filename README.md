@@ -1,3 +1,4 @@
+
 # Lancheirinha-Backend-PostgreSQL
 
 API backend para o projeto **"Lancheirinha da Nutri"**, desenvolvido com **Node.js**, **Express** e **PostgreSQL**. 🚀
@@ -30,6 +31,7 @@ Este backend é responsável por gerenciar os dados do sistema, permitindo **CRU
 ### **1. Clone o Repositório**
 ```bash
 git clone https://github.com/seu-usuario/Lancheirinha-Backend-PostgreSQL.git
+
 2. Instale as Dependências
 bash
 Copiar código
@@ -86,4 +88,3 @@ Licença
 Este projeto está licenciado sob a MIT License.
 
 Desenvolvido com ❤️ por Wenderson José. 🎉
-
