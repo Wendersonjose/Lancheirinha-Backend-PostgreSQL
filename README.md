@@ -1,78 +1,88 @@
-# Lancheirinha Backend 🥗📦
+# Lancheirinha-Backend-PostgreSQL
 
-Bem-vindo ao repositório do **Lancheirinha Backend**, a API que alimenta o sistema de gerenciamento de produtos da **Lancheirinha da Nutri**! Este backend foi desenvolvido para atender operações CRUD (Create, Read, Update, Delete) de produtos com suporte para upload de imagens.
+API backend para o projeto **"Lancheirinha da Nutri"**, desenvolvido com **Node.js**, **Express** e **PostgreSQL**. 🚀
 
----
-
-## 🌟 Funcionalidades
-- **Gerenciamento de Produtos**: Adicione, edite, visualize e exclua produtos.
-- **Upload de Imagens**: Suporte para armazenar e exibir imagens dos produtos.
-- **Banco de Dados**: Integração com MySQL para armazenamento confiável.
-- **Boas Práticas**: Código modular e organizado, facilitando manutenção e extensões futuras.
+Este backend é responsável por gerenciar os dados do sistema, permitindo **CRUD de produtos** e suportando **upload de imagens**. O banco de dados utilizado é o **PostgreSQL**, garantindo confiabilidade e desempenho.
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
-- **Node.js**: Plataforma de execução do JavaScript.
-- **Express**: Framework para criação da API.
-- **MySQL**: Banco de dados relacional.
-- **Multer**: Gerenciamento de upload de arquivos.
-- **CORS**: Configuração para requisições externas.
+## **Funcionalidades**
+- 📂 **CRUD de Produtos**:
+  - Criação
+  - Leitura
+  - Atualização
+  - Exclusão
+- 📸 **Suporte a Imagens**: Upload e gerenciamento de imagens associadas aos produtos.
+- 🗄️ **Integração com PostgreSQL**: Conexão com banco de dados para armazenamento eficiente.
 
 ---
- 
-## 🚀 Como Rodar o Projeto
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/Wendersonjose/Lancheirinha-Backend.git
-   cd Lancheirinha-Backend
 
-2.Instale as dependências:
+## **Tecnologias Utilizadas**
+- [Node.js](https://nodejs.org/)
+- [Express](https://expressjs.com/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [Multer](https://github.com/expressjs/multer) (para upload de imagens)
 
+---
+
+## **Como Configurar o Projeto**
+
+### **1. Clone o Repositório**
+```bash
+git clone https://github.com/seu-usuario/Lancheirinha-Backend-PostgreSQL.git
+2. Instale as Dependências
+bash
+Copiar código
 npm install
+3. Configure o Banco de Dados
+Certifique-se de ter o PostgreSQL instalado.
+Crie o banco de dados e a tabela utilizando o seguinte comando:
+sql
+Copiar código
+CREATE TABLE products (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    price NUMERIC(10, 2) NOT NULL,
+    description TEXT,
+    image VARCHAR(255)
+);
+Atualize as credenciais no arquivo db.js.
+4. Execute o Servidor
+bash
+Copiar código
+npm start
+O servidor estará rodando em: http://localhost:3000
 
-3.Configure o banco de dados no arquivo db.js:
+Endpoints da API
+1. Listar Produtos
+GET /api/products
 
-const db = mysql.createPool({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'lancheirinha_db',
-});
+2. Criar Produto
+POST /api/products
+Parâmetros (Body):
+name (string)
+price (number)
+description (string, opcional)
+image (file)
 
-4.Inicie o servidor:
+3. Atualizar Produto
+PUT /api/products/:id (substitua :id pelo ID do produto a ser atualizado, por exemplo, 1).
+Parâmetros (Body):
+name (string)
+price (number)
+description (string, opcional)
+image (file, opcional)
 
-node server.js
+4. Excluir Produto
+DELETE /api/products/:id (substitua :id pelo ID do produto a ser deletado, por exemplo, 1).
+Contribuição
+Contribuições são bem-vindas! Siga os passos abaixo:
+Faça um fork do repositório.
+Crie uma branch com sua feature ou correção: git checkout -b minha-feature.
+Commit suas alterações: git commit -m "Minha nova feature".
+Faça o push da branch: git push origin minha-feature.
+Crie um Pull Request. 🚀
+Licença
+Este projeto está licenciado sob a MIT License.
 
-5.Acesse a API no navegador ou em ferramentas como Postman:
-
-Base URL: http://localhost:3000/api/products
-
-📂 Estrutura de Pastas
-
-backend/
-├── controllers/
-│   └── productController.js  # Controla as ações de CRUD e upload
-├── routes/
-│   └── productRoutes.js      # Define as rotas da API
-├── uploads/                  # Armazena as imagens dos produtos
-├── db.js                     # Configuração do banco de dados
-├── server.js                 # Ponto de entrada da aplicação
-├── package.json              # Dependências e scripts do projeto
-└── .gitignore                # Ignora arquivos desnecessários no Git
-
-🌐 Rotas Disponíveis
-GET /api/products: Retorna todos os produtos.
-POST /api/products: Cria um novo produto (com upload de imagem).
-PUT /api/products/:id: Atualiza os dados de um produto.
-DELETE /api/products/:id: Remove um produto.
-
-🖼️ Exemplo de Imagem
-Ao criar ou visualizar produtos, as imagens são armazenadas na pasta uploads/ e acessadas pela URL:
-
-http://localhost:3000/uploads/<nome-da-imagem>
-📜 Licença
-Este projeto é livre para uso e distribuição. ❤️
-
-Desenvolvido por Wenderson José com 💻 e ☕.
-
+Desenvolvido com ❤️ por Wenderson José. 🎉

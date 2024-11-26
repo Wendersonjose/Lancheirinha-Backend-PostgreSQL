@@ -15,12 +15,14 @@ const db = require('./db');
 
 const testConnection = async () => {
   try {
-    const [results, fields] = await db.query('SELECT 1');
-    console.log('Connected to MySQL');
+    // Apenas tenta se conectar ao banco para verificar a conexão
+    await db.query('SELECT 1');
+    console.log('Connected to PostgreSQL');
   } catch (err) {
-    console.error('MySQL connection error:', err);
+    console.error('PostgreSQL connection error:', err);
   }
 };
+
 
 testConnection();
 

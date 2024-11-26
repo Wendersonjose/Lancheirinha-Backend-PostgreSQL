@@ -1,11 +1,12 @@
-const mysql = require('mysql2/promise');
+const { Pool } = require('pg');
 
-const db = mysql.createPool({
-  host: 'localhost',       // Host do banco de dados
-  user: 'root',            // Usuário root
-  password: '',            // Sem senha
+// Configurações de conexão para o PostgreSQL
+const db = new Pool({
+  host: 'localhost',         // Host do banco de dados
+  user: 'postgres',          // Usuário do PostgreSQL
+  password: '220219',              //Minha Senha do banco de dados
   database: 'lancheirinha_db', // Nome do banco de dados
+  port: 5432,                // Porta padrão do PostgreSQL
 });
 
 module.exports = db;
- 
