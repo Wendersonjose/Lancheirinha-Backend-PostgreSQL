@@ -1,62 +1,54 @@
-<<<<<<< HEAD
-# Lancheirinha Backend 🥗📦
+# 🥗 Lancheirinha Backend – PostgreSQL
 
-Bem-vindo ao repositório do **Lancheirinha Backend**, a API que alimenta o sistema de gerenciamento de produtos da **Lancheirinha da Nutri**! Este backend foi desenvolvido para atender operações CRUD (Create, Read, Update, Delete) de produtos com suporte para upload de imagens.
-=======
-# Lancheirinha-Backend-PostgreSQL
-
-API backend para o projeto **"Lancheirinha da Nutri"**, desenvolvido com **Node.js**, **Express** e **PostgreSQL**. 🚀
-
-Este backend é responsável por gerenciar os dados do sistema, permitindo **CRUD de produtos** e suportando **upload de imagens**. O banco de dados utilizado é o **PostgreSQL**, garantindo confiabilidade e desempenho.
->>>>>>> 43a0a62f3f2899427d423ee5ff2ebde93a157444
+Bem-vindo ao backend da **Lancheirinha da Nutri**, um sistema fictício de gerenciamento de produtos para uma lanchonete, desenvolvido como projeto acadêmico. Ele permite operações de CRUD de produtos e suporta upload de imagens, utilizando Node.js, Express e PostgreSQL.
 
 ---
 
-## **Funcionalidades**
-- 📂 **CRUD de Produtos**:
-  - Criação
-  - Leitura
-  - Atualização
-  - Exclusão
-- 📸 **Suporte a Imagens**: Upload e gerenciamento de imagens associadas aos produtos.
-- 🗄️ **Integração com PostgreSQL**: Conexão com banco de dados para armazenamento eficiente.
+## ✨ Funcionalidades
+
+- 📦 **CRUD de Produtos**
+  - Criar, listar, atualizar e excluir produtos
+- 📸 **Upload de Imagens**
+  - Enviar e gerenciar imagens associadas aos produtos
+- 🗃️ **Banco de Dados PostgreSQL**
+  - Armazenamento eficiente e seguro das informações
 
 ---
 
-## **Tecnologias Utilizadas**
+## ⚙️ Tecnologias Utilizadas
+
 - [Node.js](https://nodejs.org/)
 - [Express](https://expressjs.com/)
 - [PostgreSQL](https://www.postgresql.org/)
-- [Multer](https://github.com/expressjs/multer) (para upload de imagens)
+- [Multer](https://github.com/expressjs/multer) – Upload de arquivos
+- [dotenv](https://www.npmjs.com/package/dotenv) – Variáveis de ambiente
 
 ---
-<<<<<<< HEAD
- 
+
 ## 🚀 Como Rodar o Projeto
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/Wendersonjose/Lancheirinha-Backend.git
-   cd Lancheirinha-Backend
 
-2.Instale as dependências:
+### 1. Clonar o Repositório
 
-=======
-
-## **Como Configurar o Projeto**
-
-### **1. Clone o Repositório**
 ```bash
-git clone https://github.com/seu-usuario/Lancheirinha-Backend-PostgreSQL.git
-2. Instale as Dependências
-bash
-Copiar código
->>>>>>> 43a0a62f3f2899427d423ee5ff2ebde93a157444
+git clone https://github.com/Wendersonjose/Lancheirinha-Backend.git
+cd Lancheirinha-Backend
+
+2. Instalar as Dependências
 npm install
-3. Configure o Banco de Dados
+3. Configurar o Banco de Dados
 Certifique-se de ter o PostgreSQL instalado.
-Crie o banco de dados e a tabela utilizando o seguinte comando:
+
+Crie um banco com o nome lancheirinha_db:
+
 sql
-Copiar código
+Copiar
+Editar
+CREATE DATABASE lancheirinha_db;
+Crie a tabela de produtos:
+
+sql
+Copiar
+Editar
 CREATE TABLE products (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
@@ -64,48 +56,84 @@ CREATE TABLE products (
     description TEXT,
     image VARCHAR(255)
 );
-Atualize as credenciais no arquivo db.js.
-4. Execute o Servidor
+Crie um arquivo .env na raiz do projeto com suas credenciais:
+
+ini
+Copiar
+Editar
+DB_HOST=localhost
+DB_USER=seu_usuario
+DB_PASSWORD=sua_senha
+DB_NAME=lancheirinha_db
+DB_PORT=5432
+4. Iniciar o Servidor
 bash
-Copiar código
+Copiar
+Editar
 npm start
 O servidor estará rodando em: http://localhost:3000
 
-Endpoints da API
+📡 Endpoints da API
 1. Listar Produtos
+http
+Copiar
+Editar
 GET /api/products
-
 2. Criar Produto
+http
+Copiar
+Editar
 POST /api/products
-Parâmetros (Body):
-name (string)
-price (number)
-description (string, opcional)
-image (file)
+Body (form-data):
+
+name: string
+
+price: number
+
+description: string (opcional)
+
+image: file
 
 3. Atualizar Produto
-PUT /api/products/:id (substitua :id pelo ID do produto a ser atualizado, por exemplo, 1).
-Parâmetros (Body):
-name (string)
-price (number)
-description (string, opcional)
-image (file, opcional)
+http
+Copiar
+Editar
+PUT /api/products/:id
+Body (form-data):
+
+name: string
+
+price: number
+
+description: string (opcional)
+
+image: file (opcional)
 
 4. Excluir Produto
-DELETE /api/products/:id (substitua :id pelo ID do produto a ser deletado, por exemplo, 1).
-Contribuição
-Contribuições são bem-vindas! Siga os passos abaixo:
-Faça um fork do repositório.
-Crie uma branch com sua feature ou correção: git checkout -b minha-feature.
-Commit suas alterações: git commit -m "Minha nova feature".
-Faça o push da branch: git push origin minha-feature.
-Crie um Pull Request. 🚀
-Licença
+http
+Copiar
+Editar
+DELETE /api/products/:id
+🤝 Contribuição
+Contribuições são bem-vindas!
+
+Faça um fork do projeto.
+
+Crie uma branch: git checkout -b minha-feature
+
+Commit: git commit -m "Minha nova feature"
+
+Push: git push origin minha-feature
+
+Abra um Pull Request 🚀
+
+📜 Licença
 Este projeto está licenciado sob a MIT License.
 
-<<<<<<< HEAD
-Desenvolvido por Wenderson José com 💻 e ☕.
+Desenvolvido com 💻 e ☕ por Wenderson José
 
-=======
-Desenvolvido com ❤️ por Wenderson José. 🎉
->>>>>>> 43a0a62f3f2899427d423ee5ff2ebde93a157444
+yaml
+Copiar
+Editar
+
+---

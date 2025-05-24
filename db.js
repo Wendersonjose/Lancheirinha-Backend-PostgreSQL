@@ -1,14 +1,15 @@
-require('dotenv').config
-
 const { Pool } = require('pg');
+require('dotenv').config(); // Carregar variáveis de ambiente do .env
 
-// Configurações de conexão para o PostgreSQL usando variáveis de ambiente
 const db = new Pool({
-  host: process.env.DB_HOST || 'localhost',         // Host do banco de dados
-  user: process.env.DB_USER || 'postgres',          // Usuário do PostgreSQL
-  password: process.env.DB_PASSWORD || '220219',    // Senha do banco de dados
-  database: process.env.DB_NAME || 'lancheirinha_db', // Nome do banco de dados
-  port: process.env.DB_PORT || 5432,                // Porta padrão do PostgreSQL
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  port: process.env.DB_PORT,
+  // ssl: {
+  //   rejectUnauthorized: false, // Remova ou comente esta linha
+  // },
 });
 
 module.exports = db;
